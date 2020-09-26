@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.fragment.HomeActivity">
+    tools:context="com.fragment.foregroundService.ForegroundActivity">
+
 
     <Button
-        android:text="Fragment Tutorial"
-        android:id="@+id/fragment"
+        android:text="Start Service"
+        android:id="@+id/starService"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
-
-
     <Button
-        android:text="Foreground Service"
-        android:id="@+id/foregroundService"
+        android:text="Stop Service"
+        android:id="@+id/stoService"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 

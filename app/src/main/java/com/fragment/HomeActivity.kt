@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.fragment.foregroundService.ForegroundActivity
 import kotlinx.android.synthetic.main.activity_home.*
 
 class HomeActivity : AppCompatActivity() {
@@ -14,7 +15,11 @@ class HomeActivity : AppCompatActivity() {
 
             val intent : Intent = Intent(this,FragmentActivity::class.java)
             startActivity(intent)
+        })
 
+        foregroundService.setOnClickListener(View.OnClickListener {
+            val intent : Intent = Intent(this,ForegroundActivity::class.java)
+            startActivity(intent)
         })
     }
 }
