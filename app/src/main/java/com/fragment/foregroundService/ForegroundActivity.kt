@@ -25,6 +25,7 @@ class ForegroundActivity : AppCompatActivity() {
        //     startService(intent)
             ContextCompat.startForegroundService(this, intent)
 
+
         })
 
         stoService.setOnClickListener(View.OnClickListener {

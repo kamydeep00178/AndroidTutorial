@@ -11,10 +11,8 @@ import android.util.Log
 import android.view.View
 import com.fragment.R
 import kotlinx.android.synthetic.main.activity_bound.*
-import java.util.Observer
 
-
-class BoundActivity : AppCompatActivity() ,View.OnClickListener {
+class SecondActivity : AppCompatActivity() {
     // Variable for storing instance of our service class
     var mService: BoundService? = null
     var TAG : String="BoundActivity"
@@ -24,6 +22,11 @@ class BoundActivity : AppCompatActivity() ,View.OnClickListener {
     var mIsBound: Boolean? = null
 
 
+    override fun onStart() {
+        super.onStart()
+        // Binding to the service class
+        bindService()
+    }
 
 
     private fun getRandomNumberFromService() {
@@ -33,11 +36,8 @@ class BoundActivity : AppCompatActivity() ,View.OnClickListener {
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_bound)
+        setContentView(R.layout.activity_second)
 
-        startService?.setOnClickListener(this)
-        stopService?.setOnClickListener(this)
-        startActivity?.setOnClickListener(this)
     }
     private val serviceConnection = object : ServiceConnection {
         override fun onServiceConnected(className: ComponentName, iBinder: IBinder) {
@@ -58,7 +58,6 @@ class BoundActivity : AppCompatActivity() ,View.OnClickListener {
      * Used to bind to our service class
      */
     private fun bindService() {
-        Log.e(TAG, "bindService: ")
         Intent(this, BoundService::class.java).also { intent ->
             bindService(intent, serviceConnection, Context.BIND_AUTO_CREATE)
         }
@@ -72,25 +71,7 @@ class BoundActivity : AppCompatActivity() ,View.OnClickListener {
             unbindService(serviceConnection)
         }
     }
-    override
-    fun onClick(v: View?) {
-        when (v?.id) {
-            R.id.startService -> {
-                Log.e(TAG, "onClick: " )
-                bindService()
-            }
-            R.id.stopService -> {
-                if (mIsBound == true) {
-                    unbindService()
-                    mIsBound = false
-                }
-            }
-            R.id.startActivity -> {
-                val intent = Intent(this, SecondActivity::class.java)
-                startActivity(intent)
-            }
-        }
-    }
+
     override fun onDestroy() {
         super.onDestroy()
         // Unbinding to the service class

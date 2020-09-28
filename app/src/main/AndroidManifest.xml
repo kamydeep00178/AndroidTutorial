@@ -11,10 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".bound.SecondActivity"></activity>
+
         <service
             android:name=".bound.BoundService"
-            android:enabled="false"
-            android:exported="false"></service>
+            android:enabled="true"
+            android:exported="false" />
 
         <activity android:name=".bound.BoundActivity" />
 
@@ -31,7 +33,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".FragmentActivity" />
+        <activity android:name=".fragment.FragmentActivity" />
     </application>
 
 </manifest>

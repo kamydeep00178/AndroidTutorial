@@ -45,8 +45,7 @@ class MyService : Service() {
         Log.e(TAG, " Running: Service")
 
 
-
-            stopForeground(1)
+           // stopForeground(1)
 
         return START_NOT_STICKY
 
