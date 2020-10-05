@@ -3,6 +3,7 @@
     package="com.fragment">
 
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
         android:allowBackup="true"
@@ -11,29 +12,33 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".bound.SecondActivity"></activity>
+        <activity android:name="com.tech.jobIntent.JobIntentActivity"></activity>
+        <activity android:name="com.tech.bound.SecondActivity" />
 
         <service
-            android:name=".bound.BoundService"
+            android:name="com.tech.bound.BoundService"
             android:enabled="true"
             android:exported="false" />
 
-        <activity android:name=".bound.BoundActivity" />
+        <activity android:name="com.tech.bound.BoundActivity" />
 
-        <service android:name=".foregroundService.MyService" />
+        <service android:name="com.tech.foregroundService.MyService" />
+        <service
+            android:name="com.tech.jobIntent.MyJobIntentService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
 
         <activity
-            android:name=".foregroundService.ForegroundActivity"
+            android:name="com.tech.foregroundService.ForegroundActivity"
             android:enabled="true"
             android:exported="true" />
-        <activity android:name=".HomeActivity">
+        <activity android:name="com.tech.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".fragment.FragmentActivity" />
+        <activity android:name="com.tech.fragment.FragmentActivity" />
     </application>
 
 </manifest>

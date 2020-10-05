@@ -1,4 +1,4 @@
-package com.fragment.foregroundService
+package com.tech.foregroundService
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -32,7 +32,7 @@ class ForegroundActivity : AppCompatActivity() {
             Log.e(TAG, "stop: Service")
           /*  MyService.stopService(this)*/
 
-              var intent  = Intent(this,MyService::class.java)
+              var intent  = Intent(this, MyService::class.java)
               stopService(intent)
 
         })

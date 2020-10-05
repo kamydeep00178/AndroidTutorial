@@ -1,12 +1,15 @@
-package com.fragment
+package com.tech
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.fragment.bound.BoundActivity
-import com.fragment.foregroundService.ForegroundActivity
-import com.fragment.fragment.FragmentActivity
+import com.fragment.R
+import com.tech.bound.BoundActivity
+import com.tech.foregroundService.ForegroundActivity
+import com.tech.fragment.FragmentActivity
+import com.tech.jobIntent.JobIntentActivity
+import com.tech.jobIntent.MyJobIntentService
 import kotlinx.android.synthetic.main.activity_home.*
 
 class HomeActivity : AppCompatActivity() {
@@ -20,12 +23,17 @@ class HomeActivity : AppCompatActivity() {
         })
 
         foregroundService.setOnClickListener(View.OnClickListener {
-            val intent : Intent = Intent(this,ForegroundActivity::class.java)
+            val intent : Intent = Intent(this, ForegroundActivity::class.java)
             startActivity(intent)
         })
 
         boundService.setOnClickListener(View.OnClickListener {
-            val intent : Intent = Intent(this,BoundActivity::class.java)
+            val intent : Intent = Intent(this, BoundActivity::class.java)
+            startActivity(intent)
+        })
+
+        jobIntentService.setOnClickListener(View.OnClickListener {
+            val intent : Intent = Intent(this, JobIntentActivity::class.java)
             startActivity(intent)
         })
     }

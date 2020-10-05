@@ -1,4 +1,4 @@
-package com.fragment.bound
+package com.tech.bound
 
 import android.R
 import android.app.*
@@ -10,7 +10,7 @@ import android.os.IBinder
 import android.util.Log
 import androidx.core.app.NotificationCompat
 import androidx.lifecycle.MutableLiveData
-import com.fragment.foregroundService.ForegroundActivity
+import com.tech.foregroundService.ForegroundActivity
 import java.util.*
 
 class BoundService : Service() {

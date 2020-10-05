@@ -1,4 +1,4 @@
-package com.fragment.foregroundService
+package com.tech.foregroundService
 
 import android.R
 import android.annotation.SuppressLint
