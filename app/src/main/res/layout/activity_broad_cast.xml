@@ -5,45 +5,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.fragment.com.tech.HomeActivity">
+    tools:context="com.tech.broadcast.BroadCastActivity">
 
     <Button
-        android:text="Fragment Tutorial"
-        android:id="@+id/fragment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
-
-    <Button
-        android:text="Foreground Service"
-        android:id="@+id/foregroundService"
+        android:text="Explicit BroadCast Receiver Start"
+        android:id="@+id/broadcastEx"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
     <Button
-        android:text="Bound Service"
-        android:id="@+id/boundService"
+        android:text="Explicit BroadCast Receiver Stop"
+        android:id="@+id/broadcastExStop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:text="Custom BroadCast Receiver Start"
+        android:id="@+id/broadcastCu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
     <Button
-        android:text="Job Intent Service"
-        android:id="@+id/jobIntentService"
+        android:text="Custom BroadCast Receiver Stop"
+        android:id="@+id/broadcastECuStop"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
-
-    <Button
-        android:text="BroadCast Receiver"
-        android:id="@+id/broadcast"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
-    <Button
-        android:text="Job Scheduler"
-        android:id="@+id/jonScheduler"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
 
 
 </LinearLayout>

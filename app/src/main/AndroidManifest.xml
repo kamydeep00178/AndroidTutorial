@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application
         android:allowBackup="true"
@@ -12,7 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.tech.jobIntent.JobIntentActivity"></activity>
+        <activity android:name="com.tech.jobScheduler.JobSchedulerActivity"></activity>
+        <activity android:name="com.tech.broadcast.BroadCastActivity" />
+        <activity android:name="com.tech.jobIntent.JobIntentActivity" />
         <activity android:name="com.tech.bound.SecondActivity" />
 
         <service
@@ -27,6 +30,19 @@
             android:name="com.tech.jobIntent.MyJobIntentService"
             android:permission="android.permission.BIND_JOB_SERVICE" />
 
+        <receiver android:name="com.tech.broadcast.MyBroadCastReceiver"></receiver>
+        <receiver android:name="com.tech.broadcast.CustomBroadCastReceiver"></receiver>
+        <receiver android:name="com.tech.broadcast.OrderBroadCast2Receiver">
+            <intent-filter android:priority="2">
+                <action android:name="com.tech.broadcast.CUSTOM_BROADCAST"></action>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.tech.broadcast.OrderBroadCast3Receiver">
+            <intent-filter android:priority="3">
+                <action android:name="com.tech.broadcast.CUSTOM_BROADCAST"></action>
+            </intent-filter>
+        </receiver>
+
         <activity
             android:name="com.tech.foregroundService.ForegroundActivity"
             android:enabled="true"
@@ -39,6 +55,14 @@
             </intent-filter>
         </activity>
         <activity android:name="com.tech.fragment.FragmentActivity" />
+
+        <service android:name="com.tech.jobScheduler.MyJobScheduler"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="true"
+            android:enabled="true">
+
+
+        </service>
     </application>
 
 </manifest>
