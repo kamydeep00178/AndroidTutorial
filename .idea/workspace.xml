@@ -22,7 +22,7 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/tech/HomeActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/tech/HomeActivity.kt" afterDir="false" />
@@ -33,7 +33,6 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="ac9d918b" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -49,6 +48,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Kotlin File" />
         <option value="Kotlin Class" />
       </list>
     </option>
@@ -69,12 +69,6 @@
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
   <component name="RecentsManager">
-    <key name="android.template.-1791980090">
-      <recent name="com.tech.jobScheduler" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/src/main/java/com/fragment/fragment" />
-    </key>
     <key name="android.template.-454505470">
       <recent name="com.fragment.bound" />
       <recent name="com.fragment.service" />
@@ -83,9 +77,18 @@
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
       <recent name="com.tech.broadcast" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/java/com/fragment/fragment" />
+    </key>
     <key name="android.template.-1029664102">
       <recent name="com.tech.broadcast" />
       <recent name="com.tech.jobIntent" />
+    </key>
+    <key name="android.template.-1791980090">
+      <recent name="com.tech.jobScheduler" />
+    </key>
+    <key name="android.template.-280780506">
+      <recent name="com.tech.alarmManager" />
     </key>
   </component>
   <component name="RunManager">
@@ -162,34 +165,34 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="490" y="115" width="442" height="562" key="#com.intellij.ide.util.MemberChooser" timestamp="1601956340250">
+    <state x="490" y="115" width="452" height="562" key="#com.intellij.ide.util.MemberChooser" timestamp="1602069869112">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="490" y="115" width="442" height="562" key="#com.intellij.ide.util.MemberChooser/67.27.1299.741@67.27.1299.741" timestamp="1601956340250" />
+    <state x="490" y="115" width="452" height="562" key="#com.intellij.ide.util.MemberChooser/67.27.1299.741@67.27.1299.741" timestamp="1602069869112" />
     <state x="499" y="154" width="424" height="484" key="FileChooserDialogImpl" timestamp="1601985967143">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="499" y="154" width="424" height="484" key="FileChooserDialogImpl/67.27.1299.741@67.27.1299.741" timestamp="1601985967143" />
-    <state width="1253" height="258" key="GridCell.Tab.0.bottom" timestamp="1601985716953">
+    <state width="1253" height="347" key="GridCell.Tab.0.bottom" timestamp="1602070750720">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="258" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1601985716953" />
-    <state width="1253" height="258" key="GridCell.Tab.0.center" timestamp="1601985716953">
+    <state width="1253" height="347" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1602070750720" />
+    <state width="1253" height="347" key="GridCell.Tab.0.center" timestamp="1602070750719">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="258" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1601985716953" />
-    <state width="1253" height="258" key="GridCell.Tab.0.left" timestamp="1601985716952">
+    <state width="1253" height="347" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1602070750719" />
+    <state width="1253" height="347" key="GridCell.Tab.0.left" timestamp="1602070750719">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="258" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1601985716952" />
-    <state width="1253" height="258" key="GridCell.Tab.0.right" timestamp="1601985716953">
+    <state width="1253" height="347" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1602070750719" />
+    <state width="1253" height="347" key="GridCell.Tab.0.right" timestamp="1602070750719">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="258" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1601985716953" />
-    <state x="372" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1601205064135">
+    <state width="1253" height="347" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1602070750719" />
+    <state x="372" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1602132245952">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="372" y="224" key="com.intellij.ide.util.TipDialog/67.27.1299.741@67.27.1299.741" timestamp="1601205064135" />
+    <state x="372" y="224" key="com.intellij.ide.util.TipDialog/67.27.1299.741@67.27.1299.741" timestamp="1602132245952" />
     <state x="289" y="103" width="855" height="586" key="find.popup" timestamp="1601866473330">
       <screen x="67" y="27" width="1299" height="741" />
     </state>

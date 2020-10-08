@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.tech.jobScheduler.JobSchedulerActivity"></activity>
+        <activity android:name="com.tech.alarmManager.AlarmManagerActivity"></activity>
+        <activity android:name="com.tech.jobScheduler.JobSchedulerActivity" />
         <activity android:name="com.tech.broadcast.BroadCastActivity" />
         <activity android:name="com.tech.jobIntent.JobIntentActivity" />
         <activity android:name="com.tech.bound.SecondActivity" />
@@ -30,16 +31,16 @@
             android:name="com.tech.jobIntent.MyJobIntentService"
             android:permission="android.permission.BIND_JOB_SERVICE" />
 
-        <receiver android:name="com.tech.broadcast.MyBroadCastReceiver"></receiver>
-        <receiver android:name="com.tech.broadcast.CustomBroadCastReceiver"></receiver>
+        <receiver android:name="com.tech.broadcast.MyBroadCastReceiver" />
+        <receiver android:name="com.tech.broadcast.CustomBroadCastReceiver" />
         <receiver android:name="com.tech.broadcast.OrderBroadCast2Receiver">
             <intent-filter android:priority="2">
-                <action android:name="com.tech.broadcast.CUSTOM_BROADCAST"></action>
+                <action android:name="com.tech.broadcast.CUSTOM_BROADCAST" />
             </intent-filter>
         </receiver>
         <receiver android:name="com.tech.broadcast.OrderBroadCast3Receiver">
             <intent-filter android:priority="3">
-                <action android:name="com.tech.broadcast.CUSTOM_BROADCAST"></action>
+                <action android:name="com.tech.broadcast.CUSTOM_BROADCAST" />
             </intent-filter>
         </receiver>
 
@@ -55,14 +56,28 @@
             </intent-filter>
         </activity>
         <activity android:name="com.tech.fragment.FragmentActivity" />
+        <receiver android:name="com.tech.alarmManager.AlarmBroadCast"
+            android:directBootAware="true"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
 
-        <service android:name="com.tech.jobScheduler.MyJobScheduler"
-            android:permission="android.permission.BIND_JOB_SERVICE"
-            android:exported="true"
-            android:enabled="true">
-
+        <service android:name="com.tech.alarmManager.AlarmService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":remote">
 
         </service>
+
+        <service
+            android:name="com.tech.jobScheduler.MyJobScheduler"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE"></service>
     </application>
 
 </manifest>

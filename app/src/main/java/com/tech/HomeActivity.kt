@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.fragment.R
+import com.tech.alarmManager.AlarmManagerActivity
 import com.tech.bound.BoundActivity
 import com.tech.broadcast.BroadCastActivity
 import com.tech.broadcast.MyBroadCastReceiver
@@ -52,5 +53,10 @@ class HomeActivity : AppCompatActivity() {
                 startActivity(intent)
             }
         )
+
+        alarm.setOnClickListener(View.OnClickListener {
+            val intent : Intent = Intent(this, AlarmManagerActivity::class.java)
+            startActivity(intent)
+        })
     }
 }
