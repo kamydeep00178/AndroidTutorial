@@ -1,6 +1,8 @@
 package com.tech.fragment
 
+import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -19,15 +21,24 @@ private const val ARG_PARAM2 = "param2"
  */
 class ThirdFragment : Fragment() {
     // TODO: Rename and change types of parameters
+
+    var TAG : String="ThirdFragment"
+
     private var param1: String? = null
     private var param2: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Log.e(TAG, "onCreate: ", )
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+    }
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        Log.e(TAG, "onAttach: ", )
     }
 
     override fun onCreateView(
@@ -56,5 +67,40 @@ class ThirdFragment : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        Log.e(TAG, "onActivityCreated: ", )
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.e(TAG, "onStart: ", )
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.e(TAG, "onResume: ", )
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.e(TAG, "onPause: ", )
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        Log.e(TAG, "onDestroyView: ", )
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.e(TAG, "onDestroy: ", )
+    }
+
+    override fun onDetach() {
+        super.onDetach()
+        Log.e(TAG, "onDetach: ", )
     }
 }

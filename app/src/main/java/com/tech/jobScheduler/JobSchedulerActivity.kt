@@ -22,6 +22,8 @@ class JobSchedulerActivity : AppCompatActivity() {
 
         startSchedule.setOnClickListener(View.OnClickListener {
 
+
+
             val componentName = ComponentName(this, MyJobScheduler::class.java)
             /*= JobInfo.Builder(12, componentName)
                 .setRequiresCharging(true)

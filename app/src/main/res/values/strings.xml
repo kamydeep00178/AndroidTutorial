@@ -4,4 +4,26 @@
     <string name="hello_blank1_fragment">Hello One blank fragment</string>
     <string name="hello_blank_fragment">Hello Second blank fragment</string>
 
+    <string name="agree">Agree</string>
+    <string name="cancel">Cancel</string>
+    <string name="disagree">Disagree</string>
+    <string name="download">Download</string>
+    <string name="download_music">Download music</string>
+    <string name="found_new_song">Fond new song</string>
+    <string name="need_permission_to_access">Need permission to access music.</string>
+    <string name="no_song_found">No song found</string>
+    <string name="permission_requirement">Permission requirement</string>
+    <string name="search_song">Search song</string>
+    <string name="unknown">\u003cunknown\u003e</string>
+    <string name="unsupported_format">Unsupported format</string>
+
+    <string name="title_main">My income</string>
+    <string name="detail_caption_status">Status</string>
+    <string name="detail_caption_date">Date</string>
+    <string name="detail_caption_amount">Amount</string>
+    <string name="action_back">Back</string>
+
+    <declare-styleable name="PlayPauseState">
+        <attr name="state_pause" format="boolean" />
+    </declare-styleable>
 </resources>

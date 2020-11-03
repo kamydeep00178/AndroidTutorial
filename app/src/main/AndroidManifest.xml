@@ -13,7 +13,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.tech.alarmManager.AlarmManagerActivity"></activity>
+        <activity android:name="com.tech.motionWork.MotionExample"></activity>
+        <activity
+            android:name="com.tech.musicPlayer.songList.SongListActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"></activity>
+        <activity
+            android:name="com.tech.musicPlayer.playSong.PlaySongActivity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name="com.tech.musicPlayer.player.PlayerService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity android:name="com.tech.alarmManager.AlarmManagerActivity" />
         <activity android:name="com.tech.jobScheduler.JobSchedulerActivity" />
         <activity android:name="com.tech.broadcast.BroadCastActivity" />
         <activity android:name="com.tech.jobIntent.JobIntentActivity" />
@@ -56,7 +71,9 @@
             </intent-filter>
         </activity>
         <activity android:name="com.tech.fragment.FragmentActivity" />
-        <receiver android:name="com.tech.alarmManager.AlarmBroadCast"
+
+        <receiver
+            android:name="com.tech.alarmManager.AlarmBroadCast"
             android:directBootAware="true"
             android:enabled="true"
             android:exported="true">
@@ -66,18 +83,16 @@
             </intent-filter>
         </receiver>
 
-        <service android:name="com.tech.alarmManager.AlarmService"
+        <service
+            android:name="com.tech.alarmManager.AlarmService"
             android:enabled="true"
             android:exported="false"
-            android:process=":remote">
-
-        </service>
-
+            android:process=":remote" />
         <service
             android:name="com.tech.jobScheduler.MyJobScheduler"
             android:enabled="true"
             android:exported="true"
-            android:permission="android.permission.BIND_JOB_SERVICE"></service>
+            android:permission="android.permission.BIND_JOB_SERVICE" />
     </application>
 
 </manifest>
