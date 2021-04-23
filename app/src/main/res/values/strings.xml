@@ -26,4 +26,7 @@
     <declare-styleable name="PlayPauseState">
         <attr name="state_pause" format="boolean" />
     </declare-styleable>
+    <string name="next">Next</string>
+    <string name="image">Random city image</string>
+    <string name="change">Change</string>
 </resources>

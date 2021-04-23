@@ -5,16 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_marginTop="50dp"
     tools:context="com.tech.broadcast.BroadCastActivity">
 
     <Button
-        android:text="Explicit BroadCast Receiver Start"
+        android:text="Imlicit BroadCast Receiver Start"
         android:id="@+id/broadcastEx"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
     <Button
-        android:text="Explicit BroadCast Receiver Stop"
+        android:text="Imlicit BroadCast Receiver Stop"
         android:id="@+id/broadcastExStop"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>

@@ -13,9 +13,11 @@ import androidx.core.app.NotificationCompat
 
 class MyService : Service() {
 
+
+
     val CHANNEL_ID = "ForegroundServiceChannel"
     var TAG : String="MyService"
-
+     var p=0;
     override fun onCreate() {
         Log.e(TAG, "start: on Create")
         super.onCreate()
@@ -26,6 +28,7 @@ class MyService : Service() {
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         Log.e(TAG, "start Command: Service")
         var input : String = intent!!.getStringExtra("inputExtra")
+
         createNotificationChannel()
         val notificationIntent = Intent(this, ForegroundActivity::class.java)
         val pendingIntent = PendingIntent.getActivity(
@@ -42,10 +45,15 @@ class MyService : Service() {
 
         startForeground(1, notification);
 
-        Log.e(TAG, " Running: Service")
 
+        p++;
+        for (i in 0..100)
+        {
+            Thread.sleep(10)
+            Log.e(TAG, " ${p} Running: Service -- > "+i)
 
-           // stopForeground(1)
+        }
+     //    stopForeground(1)
 
         return START_NOT_STICKY
 
@@ -63,6 +71,8 @@ class MyService : Service() {
 
 
 
+
+
     fun createNotificationChannel()
     {
         if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.O)
@@ -76,6 +86,14 @@ class MyService : Service() {
             var notificationManager : NotificationManager = getSystemService(NotificationManager::class.java)
             notificationManager.createNotificationChannel(notificationChannel)
         }
+    }
+
+    override fun onTaskRemoved(rootIntent: Intent?) {
+        Log.e(TAG, "On Task Removed")
+        super.onTaskRemoved(rootIntent)
+        Log.e(TAG, "On Task Removed")
+
+        stopSelf()
     }
 
 

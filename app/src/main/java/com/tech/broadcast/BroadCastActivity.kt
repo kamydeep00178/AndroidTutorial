@@ -1,5 +1,6 @@
 package com.tech.broadcast
 
+import android.content.Intent
 import android.content.IntentFilter
 import android.net.ConnectivityManager
 import androidx.appcompat.app.AppCompatActivity
@@ -21,7 +22,11 @@ class BroadCastActivity : AppCompatActivity() {
 
         val intentFilter1 : IntentFilter = IntentFilter("com.tech.broadcast.CUSTOM_BROADCAST")
         intentFilter1.priority=1
+
         registerReceiver(orderCastReceiver,intentFilter1)
+
+        //
+
 
 
       /*  val intentFilter : IntentFilter = IntentFilter("com.tech.broadcast.CUSTOM_BROADCAST")
@@ -36,8 +41,26 @@ class BroadCastActivity : AppCompatActivity() {
         })
 
         broadcastCu.setOnClickListener(View.OnClickListener {
-            val intentFilter : IntentFilter = IntentFilter("com.tech.broadcast.CUSTOM_BROADCAST")
-            registerReceiver(customCastReceiver,intentFilter)
+
+            // one way
+            // register reciver
+          /* val intentFilter : IntentFilter = IntentFilter("com.tech.broadcast.CUSTOM_BROADCAST")
+            registerReceiver(customCastReceiver,intentFilter)*/
+
+
+
+            // Send reciver
+
+            val send : Intent=Intent("com.tech.broadcast.CUSTOM_BROADCAST")
+        //    intent.setClass(this,CustomBroadCastReceiver::class.java)
+            send.putExtra("com.tech.broadcast.EXTRA","kamal");
+           // sendBroadcast(send)
+            sendOrderedBroadcast(send,null)
+
+        //
+
+
+
         })
         broadcastECuStop.setOnClickListener(View.OnClickListener {
             unregisterReceiver(customCastReceiver)

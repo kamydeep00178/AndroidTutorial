@@ -6,6 +6,7 @@ import android.content.Intent
 import android.util.Log
 import android.widget.Toast
 
+//Explicit BroadCast Reciver
 class CustomBroadCastReceiver : BroadcastReceiver() {
     override fun onReceive(p0: Context?, p1: Intent?) {
         if("com.tech.broadcast.CUSTOM_BROADCAST".equals(p1?.action)) {

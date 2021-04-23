@@ -1,6 +1,7 @@
 package com.tech.fragment
 
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -10,12 +11,13 @@ import com.fragment.R
 import kotlinx.android.synthetic.main.activity_main.*
 
 
-class FragmentActivity : AppCompatActivity() {
+class FragmentActivity : AppCompatActivity() , OneFragment.TextClickedListener{
 
     var TAG : String="Activity"
 
 
-    
+    var ft: FragmentTransaction = supportFragmentManager.beginTransaction()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -88,6 +90,10 @@ class FragmentActivity : AppCompatActivity() {
     override fun onPause() {
         super.onPause()
         Log.e(TAG, "onPause: ")
+//        var ft: FragmentTransaction = supportFragmentManager.beginTransaction()
+        ft.replace(R.id.fragment, SecondFragment())
+        ft.commit()
+
     }
 
     override fun onStop() {
@@ -105,13 +111,13 @@ class FragmentActivity : AppCompatActivity() {
     fun addFragment(fragment: Fragment, TAG: String)
     {
         supportFragmentManager.beginTransaction().add(R.id.fragment, fragment, TAG)
-        .addToBackStack("TAG").commit()
+        .addToBackStack("TAG").commitAllowingStateLoss()
     }
 
     fun replaceFragment(fragment: Fragment, TAG: String)
     {
         supportFragmentManager.beginTransaction().replace(R.id.fragment, fragment, TAG)
-            .addToBackStack("TAG").commit()
+            .addToBackStack("TAG").commitAllowingStateLoss()
     }
 
 
@@ -129,6 +135,21 @@ class FragmentActivity : AppCompatActivity() {
         //list.add(frag4)
 
         return list
+    }
+
+
+
+
+    override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {
+        super.onSaveInstanceState(outState, outPersistentState)
+
+
+    }
+
+    override fun sendText(text: String) {
+//        val callingFragment = getSupportFragmentManager().findFragmentById(R.id.fragment_b) as FragmentB
+//        //calling the updateText method of the FragmentB
+//        callingFragment.updateText(text)
     }
 
 

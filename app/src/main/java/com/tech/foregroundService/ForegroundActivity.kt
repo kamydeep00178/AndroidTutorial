@@ -22,14 +22,14 @@ class ForegroundActivity : AppCompatActivity() {
         var intent = Intent(this, MyService::class.java)
             intent.putExtra("inputExtra", "Hello Start")
 
-       //     startService(intent)
-            ContextCompat.startForegroundService(this, intent)
+        //    startService(intent)
+          ContextCompat.startForegroundService(this, intent)
 
 
         })
 
         stoService.setOnClickListener(View.OnClickListener {
-            Log.e(TAG, "stop: Service")
+            Log.e(TAG, "stop------------>: Service")
           /*  MyService.stopService(this)*/
 
               var intent  = Intent(this, MyService::class.java)

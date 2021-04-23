@@ -7,7 +7,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import com.fragment.R
+import kotlinx.android.synthetic.main.fragment_one.*
+import kotlinx.android.synthetic.main.fragment_second.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -23,6 +27,7 @@ class SecondFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+
 
     var TAG : String="SecondFragment"
     override fun onAttach(context: Context) {
@@ -47,6 +52,15 @@ class SecondFragment : Fragment() {
         // Inflate the layout for this fragment
         Log.e(TAG, "onCreateView: ", )
         return inflater.inflate(R.layout.fragment_second, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val model = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
+        model.message.observe(viewLifecycleOwner, Observer {
+            textViewReceiver.text = it
+        })
     }
 
     companion object {
@@ -108,4 +122,7 @@ class SecondFragment : Fragment() {
         super.onDetach()
         Log.e(TAG, "onDetach: ", )
     }
+
+
+
 }

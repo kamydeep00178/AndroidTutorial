@@ -2,23 +2,51 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.fragment">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
+        android:name="com.tech.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.tech.motionWork.MotionExample"></activity>
+        <activity android:name="com.tech.viewPager2.MyViewPager2"></activity>
+        <activity android:name="com.tech.rx.MyRxActivity" />
+        <activity android:name="com.tech.databinding.FormActivity" />
+        <activity android:name="com.tech.telephoneyMan.TeleActivity" />
+        <activity android:name="com.tech.daggerPCK.DaggerActivity" />
+        <activity android:name="com.tech.workman.WorkActivity" />
+        <activity android:name="com.tech.LinkedListInterview.KotlinActivity" />
+        <activity android:name="com.tech.viewModelExample.MainActivity" />
+        <activity
+            android:name="com.tech.activity.SingleTOP"
+            android:launchMode="singleTask" />
+        <activity android:name="com.tech.activity.ThirdActivity" />
+        <activity android:name="com.tech.activity.SecondActivity" />
+        <activity android:name="com.tech.activity.ActivityLifeCycle" />
+
+        <service
+            android:name="com.tech.playmucic.MusicService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name="com.tech.playmucic.PlayMusicActivity" />
+        <activity android:name="com.tech.corountine.CoActivity" />
+        <activity android:name="com.tech.motionWork.MotionExample" />
         <activity
             android:name="com.tech.musicPlayer.songList.SongListActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"></activity>
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
         <activity
             android:name="com.tech.musicPlayer.playSong.PlaySongActivity"
             android:screenOrientation="portrait" />
@@ -46,8 +74,7 @@
             android:name="com.tech.jobIntent.MyJobIntentService"
             android:permission="android.permission.BIND_JOB_SERVICE" />
 
-        <receiver android:name="com.tech.broadcast.MyBroadCastReceiver" />
-        <receiver android:name="com.tech.broadcast.CustomBroadCastReceiver" />
+        <receiver android:name="com.tech.broadcast.MyBroadCastReceiver" /> <!-- <receiver android:name="com.tech.broadcast.CustomBroadCastReceiver" android:exported="true" /> -->
         <receiver android:name="com.tech.broadcast.OrderBroadCast2Receiver">
             <intent-filter android:priority="2">
                 <action android:name="com.tech.broadcast.CUSTOM_BROADCAST" />
@@ -93,6 +120,10 @@
             android:enabled="true"
             android:exported="true"
             android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <activity android:name="org.example.kotlin.databinding.MainActivity" />
+        <service
+            android:name="com.tech.intentSe.MyIntentService"/>
     </application>
 
 </manifest>

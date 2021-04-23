@@ -7,6 +7,8 @@ import android.net.ConnectivityManager
 import android.util.Log
 import android.widget.Toast
 
+
+// Imlicit with
 class MyBroadCastReceiver : BroadcastReceiver() {
     override fun onReceive(p0: Context?, p1: Intent?) {
             if(Intent.ACTION_BOOT_COMPLETED.equals(p1?.action)) {
@@ -18,11 +20,11 @@ class MyBroadCastReceiver : BroadcastReceiver() {
                var bol : Boolean? = p1?.getBooleanExtra(ConnectivityManager.EXTRA_NO_CONNECTIVITY,false)
                 Log.e("MyBroadCast", "Connectivity Change")
                 if (bol!!) {
-                    Toast.makeText(p0, "Disconnected", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(p0, "Connection Disconnected", Toast.LENGTH_SHORT).show()
                 }
                 else
                 {
-                    Toast.makeText(p0, "Connected", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(p0, "Connection Connected", Toast.LENGTH_SHORT).show()
 
                 }
             }
