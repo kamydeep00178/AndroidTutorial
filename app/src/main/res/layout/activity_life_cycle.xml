@@ -24,13 +24,27 @@
     </Button>
 
     <Button
-        android:text="Single First Time"
+        android:text="Single Task"
         android:id="@+id/singleTask"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
     </Button>
 
 
+    <Button
+        android:text="Single Instance"
+        android:id="@+id/singleInstace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </Button>
 
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spinner"
+        android:layoutMode="clipBounds"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </androidx.appcompat.widget.AppCompatSpinner>
 
 </LinearLayout>

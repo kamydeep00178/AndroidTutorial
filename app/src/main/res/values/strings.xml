@@ -29,4 +29,7 @@
     <string name="next">Next</string>
     <string name="image">Random city image</string>
     <string name="change">Change</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="time_square">Time Sequare</string>
+    <string name="i_am_snippet">Snippet</string>
 </resources>

@@ -3,6 +3,9 @@ package com.tech.activity
 import android.content.Intent
 import android.os.*
 import android.util.Log
+import android.view.View
+import android.widget.AdapterView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.fragment.R
 import com.tech.dagger.di.componenet.AshComponent
@@ -59,7 +62,7 @@ class ActivityLifeCycle : AppCompatActivity() {
         //msg.setData();
         msg.sendToTarget()
         //handlerThread.getHandler().sendEmptyMessage(1);
-        handlerThread.getHandler()!!.postAtTime(runnable1, token, SystemClock.uptimeMillis())
+     //   handlerThread.getHandler()!!.postAtTime(runnable1, token, SystemClock.uptimeMillis())
         handlerThread.getHandler()!!.post(runnable1)
         //handlerThread.getHandler().post(new ExampleRunnable1());
         //handlerThread.getHandler().postAtFrontOfQueue(new ExampleRunnable2());
@@ -71,6 +74,10 @@ class ActivityLifeCycle : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+
+
+
         setContentView(R.layout.activity_life_cycle)
 
         Log.e(TAG, "After before onCreate: ", )
@@ -125,12 +132,22 @@ class ActivityLifeCycle : AppCompatActivity() {
         )
         buttonSecond.setOnClickListener({
             doWork()
-
+            Toast.makeText(this,"Kamal",Toast.LENGTH_SHORT).show()
             /* val intent: Intent = Intent(this, SecondActivity::class.java)
              startActivity(intent)*/
         })
         singleTop.setOnClickListener({
-            val intent: Intent = Intent(this, SingleTOP::class.java)
+            val intent = Intent(this, SingleTOP::class.java)
+
+            startActivity(intent)
+        })
+
+        singleInstace.setOnClickListener({
+            val intent = Intent(this, SingleInstance::class.java)
+            intent.putExtra("k","v")
+            var bundle  = Bundle()
+            bundle.putString("key","value")
+            intent.putExtras(bundle)
             startActivity(intent)
         })
 

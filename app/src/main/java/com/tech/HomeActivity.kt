@@ -8,8 +8,10 @@ import com.fragment.R
 import com.tech.LinkedListInterview.KotlinActivity
 import com.tech.activity.ActivityLifeCycle
 import com.tech.alarmManager.AlarmManagerActivity
+import com.tech.backgroundwork.BackgroundActivity
 import com.tech.bound.BoundActivity
 import com.tech.broadcast.BroadCastActivity
+import com.tech.camerx.CameraActivity
 import com.tech.corountine.CoActivity
 import com.tech.daggerPCK.DaggerActivity
 import com.tech.foregroundService.ForegroundActivity
@@ -17,12 +19,13 @@ import com.tech.fragment.FragmentActivity
 import com.tech.intentSe.MyIntentService
 import com.tech.jobIntent.JobIntentActivity
 import com.tech.jobScheduler.JobSchedulerActivity
+import com.tech.myMap.MapsActivity
 import com.tech.observerExample.Message
 import com.tech.observerExample.MessagePublisher
 import com.tech.observerExample.MessageSubscriberOne
 import com.tech.observerExample.MessageSubscriberTwo
 import com.tech.playmucic.PlayMusicActivity
-import com.tech.rx.MyRxActivity
+import com.tech.rxMy.MyRxActivity
 import com.tech.telephoneyMan.TeleActivity
 import com.tech.viewModelExample.MainActivity
 import com.tech.viewPager2.MyViewPager2
@@ -153,7 +156,18 @@ class HomeActivity : AppCompatActivity() {
             intent2.putExtra("name","Third")
             startService(intent2)
         })
-
+        backgroundService.setOnClickListener({
+            var intent = Intent(this,BackgroundActivity::class.java)
+            startActivity(intent)
+        })
+        camera.setOnClickListener({
+            var intent = Intent(this,CameraActivity::class.java)
+            startActivity(intent)
+        })
+        myMap.setOnClickListener({
+            var intent = Intent(this,MapsActivity::class.java)
+            startActivity(intent)
+        })
 
 
 //        motionLayout.setOnClickListener(View.OnClickListener {

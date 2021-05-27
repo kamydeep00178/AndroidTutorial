@@ -12,7 +12,8 @@ class MyViewPager2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_my_view_pager2)
         view_pager2.adapter = ViewPagerAdapter()
-        view_pager2.orientation=ViewPager2.ORIENTATION_VERTICAL
+        view_pager2.orientation=ViewPager2.ORIENTATION_HORIZONTAL
+        view_pager2.setPageTransformer(DepthPageTransformer())
         view_pager2.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageScrolled(
                 position: Int,

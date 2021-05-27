@@ -12,6 +12,9 @@ class SingleTOP : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sinngle_t_o_p)
+
+
+
         Log.e("SingleTop", "onCreate: ")
         singleTopSecond.setOnClickListener({
             val intent : Intent = Intent(this, SingleTOP::class.java)

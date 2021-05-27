@@ -80,6 +80,7 @@ class FragmentActivity : AppCompatActivity() , OneFragment.TextClickedListener{
     override fun onStart() {
         super.onStart()
         Log.e(TAG, "onStart: ")
+
     }
 
     override fun onResume() {

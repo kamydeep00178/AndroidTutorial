@@ -34,7 +34,7 @@ class OneFragment : Fragment() {
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-
+        requireActivity()
         Log.e(TAG, "onAttach: ")
     }
 
@@ -42,6 +42,7 @@ class OneFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setRetainInstance(true)
+        savedInstanceState?.putString("","")
         Log.e(TAG, "onCreate: ", )
 
        // setRetainInstance(true);

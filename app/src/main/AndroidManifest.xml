@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.fragment">
-
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the "MyLocation" functionality.
+    -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!--
+    Adding android.hardware.camera.any makes sure that the device has a camera.
+    Specifying .any means that it can be a front camera or a back camera.
+    -->
+    <uses-feature android:name="android.hardware.camera.any" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
@@ -19,17 +30,38 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.tech.viewPager2.MyViewPager2"></activity>
-        <activity android:name="com.tech.rx.MyRxActivity" />
+        <activity android:name="com.tech.rxMy.KamalRx"></activity>
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name="com.tech.myMap.MapsActivity"
+            android:label="@string/title_activity_maps" />
+        <activity android:name="com.tech.myMap.MapActivity" />
+        <activity android:name="com.tech.camerx.CameraActivity" />
+        <activity
+            android:name="com.tech.activity.SingleInstance"
+            android:launchMode="singleInstance" />
+        <activity android:name="com.tech.backgroundwork.CoroutineActivity" />
+        <activity android:name="com.tech.backgroundwork.BackgroundActivity" />
+        <activity android:name="com.tech.viewPager2.MyViewPager2" />
+        <activity android:name="com.tech.rxMy.MyRxActivity" />
         <activity android:name="com.tech.databinding.FormActivity" />
         <activity android:name="com.tech.telephoneyMan.TeleActivity" />
         <activity android:name="com.tech.daggerPCK.DaggerActivity" />
         <activity android:name="com.tech.workman.WorkActivity" />
         <activity android:name="com.tech.LinkedListInterview.KotlinActivity" />
         <activity android:name="com.tech.viewModelExample.MainActivity" />
-        <activity
-            android:name="com.tech.activity.SingleTOP"
-            android:launchMode="singleTask" />
+        <activity android:name="com.tech.activity.SingleTOP" />
         <activity android:name="com.tech.activity.ThirdActivity" />
         <activity android:name="com.tech.activity.SecondActivity" />
         <activity android:name="com.tech.activity.ActivityLifeCycle" />
@@ -122,8 +154,8 @@
             android:permission="android.permission.BIND_JOB_SERVICE" />
 
         <activity android:name="org.example.kotlin.databinding.MainActivity" />
-        <service
-            android:name="com.tech.intentSe.MyIntentService"/>
+
+        <service android:name="com.tech.intentSe.MyIntentService" />
     </application>
 
 </manifest>
