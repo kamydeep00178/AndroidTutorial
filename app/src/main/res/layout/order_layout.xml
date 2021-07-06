@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="orderModel"
+            type="com.tech.demoFragmentWithRecyclerView.model.OrderModel" />
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/color_disabled"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:padding="10dp"
+    android:id="@+id/parnet"
+    tools:context="com.tech.alarmManager.AlarmManagerActivity">
+
+    <TextView
+        android:textColor="@color/Blue"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:id="@+id/id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{String.valueOf(orderModel.id)}"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:textColor="@color/design_default_color_primary"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold|italic"
+        android:textSize="18sp"
+        android:id="@+id/num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{orderModel.name}"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

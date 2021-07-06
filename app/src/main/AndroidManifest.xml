@@ -30,7 +30,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.tech.rxMy.KamalRx"></activity>
+        <activity android:name="com.tech.demoFragmentWithRecyclerView.Activity_with_Fargment"></activity>
+        <activity android:name="com.tech.customView.CustomActivity" />
+        <activity android:name="com.tech.rxMy.KamalRx" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -59,7 +61,7 @@
         <activity android:name="com.tech.telephoneyMan.TeleActivity" />
         <activity android:name="com.tech.daggerPCK.DaggerActivity" />
         <activity android:name="com.tech.workman.WorkActivity" />
-        <activity android:name="com.tech.LinkedListInterview.KotlinActivity" />
+        <activity android:name="com.tech.kotlinemy.KotlinActivity" />
         <activity android:name="com.tech.viewModelExample.MainActivity" />
         <activity android:name="com.tech.activity.SingleTOP" />
         <activity android:name="com.tech.activity.ThirdActivity" />

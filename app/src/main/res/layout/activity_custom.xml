@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context="com.tech.customView.CustomActivity">
+
+
+   <!-- <com.tech.customView.EmtionalFaceView
+        android:id="@+id/emView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+-->
+    <com.tech.customView.IndicatorView
+        android:id="@+id/indicator1"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/indicator2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.tech.customView.IndicatorView
+        android:id="@+id/indicator2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/indicator3"
+        app:layout_constraintStart_toEndOf="@id/indicator1"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.tech.customView.IndicatorView
+        android:id="@+id/indicator3"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/indicator4"
+        app:layout_constraintStart_toEndOf="@id/indicator2"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.tech.customView.IndicatorView
+        android:id="@+id/indicator4"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/indicator5"
+        app:layout_constraintStart_toEndOf="@id/indicator3"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.tech.customView.IndicatorView
+        android:id="@+id/indicator5"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/indicator4"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+</LinearLayout>

@@ -18,6 +18,8 @@ class CoActivity : AppCompatActivity() {
 
 
     private val parentJob = Job()
+
+    private val supJob = SupervisorJob()
     // 1
     private val coroutineExceptionHandler: CoroutineExceptionHandler =
         CoroutineExceptionHandler { _, throwable ->
@@ -27,11 +29,14 @@ class CoActivity : AppCompatActivity() {
               //  errorMessage.visibility = View.VISIBLE
                // errorMessage.text = getString(R.string.error_message)
              //   Log.e("TAG", ": "+ex)
+                Log.e("TAG", ": "+throwable )
             }
 
-            GlobalScope.launch { println("Caught $throwable") }
+            CoroutineScope(Dispatchers.Main).launch { println("Caught $throwable")
+                Log.e("TAG Here", ": "+throwable  )
+            }
         }
-    private val coroutineScope = CoroutineScope(Dispatchers.Main + parentJob +
+    private val coroutineScope = CoroutineScope(supJob+Dispatchers.Main  +
             coroutineExceptionHandler)
 
 
@@ -51,25 +56,57 @@ class CoActivity : AppCompatActivity() {
                 var result2 = async { getStock2() }
                 var total = result1.await() + result2.await()
                 Log.e("TAG", "onCreate: $total"+Thread.currentThread().name)
-            }
 
+                var result3 = withContext(Dispatchers.IO) { getStock1() }
+                var result4 = withContext(Dispatchers.IO) { getStock2() }
+                var total1 = result3+ result4
+                Log.e("TAG", "onCreate: $total1"+Thread.currentThread().name)
+            }
 
         })
 
-       CoroutineScope(Dispatchers.Main).launch {
+       /*CoroutineScope(Dispatchers.Main).launch {
             txt.text=UserDataManager2().getTotalUserCount().toString()
            // txt.text = UserDataManager1().getTotalUserCount().toString()
 
-        }
+        }*/
 
-
+        val scope = CoroutineScope(parentJob+coroutineExceptionHandler)
         btnCo.setOnClickListener({
             coroutineScope.launch {
                 Log.e("TAG", "onCreate: "+Thread.currentThread().name )
                 first()
                 Log.e("TAG", "onCreate1: "+Thread.currentThread().name )
+                supJob.cancel()
+             //   var a = 10/0
+
+                Log.e("TAG", "onCreate: "+"Data come here")
+                Log.e("TAG", "onCreate: "+"Data come here")
+
+                second()
+
+                Log.e("TAG", "onCreate: "+"Data come here")
+            }
+
+            coroutineScope.launch {
+                Log.e("TAG", "second onCreate: "+Thread.currentThread().name )
+                first()
+                Log.e("TAG", "second onCreate1: "+Thread.currentThread().name )
                 second()
             }
+
+//            scope.launch {
+//                supervisorScope {
+//                    launch {
+//                        Log.e("TAG", "subrtviser 1: "+Thread.currentThread().name )
+//                        var a = 10/0
+//                    }
+//                    launch {
+//                        Log.e("TAG", "subrtviser 2: "+Thread.currentThread().name )
+//
+//                    }
+//                }
+//            }
 
 
         })
@@ -123,17 +160,25 @@ class CoActivity : AppCompatActivity() {
     private suspend fun first(){
         withContext(Dispatchers.Main)
         {
-            Toast.makeText(applicationContext,"first",Toast.LENGTH_SHORT).show()
-            Log.e("TAG", "onCreate1FF: "+Thread.currentThread().name )
-          //  val a = 10/0
-         throw Exception()
-           // parentJob.cancel()
+          /*  try {
+*/
+
+                Toast.makeText(applicationContext, "first", Toast.LENGTH_SHORT).show()
+                Log.e("TAG", "onCreate1FF: " + Thread.currentThread().name)
+                // val a = 10/0
+              //  throw Exception()
+            //    parentJob.cancel()
+          /*  }
+            catch (e :Exception)
+            {
+                Log.e("TAG", "e: "+e.toString() )
+            }*/
         }
     }
     private suspend fun second(){
         withContext(Dispatchers.Main)
         {
-            Toast.makeText(applicationContext,"second",Toast.LENGTH_SHORT).show()
+            Toast.makeText(applicationContext,"second",Toast.LENGTH_LONG).show()
             Log.e("TAG", "onCreate1SS: "+Thread.currentThread().name )
 
         }

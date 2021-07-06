@@ -1,5 +1,7 @@
 package com.tech.kotlinemy
 
+import android.util.Log
+
 class HighOrder {
 
     /** In Kotlin, a function which can accepts a function
@@ -17,11 +19,13 @@ class HighOrder {
 
 
    // 1. lamda with Unit
-    var lamda = { println("kamal deep kakkar")}
+    var lamda = { print("TAG"+"kamal deep kakkar")}
 
-    fun highFun( lmbd: () -> Unit )
+     fun highFun( lmbd: () -> Unit )
     {
+        Log.e("TAG", "before highFun: ", )
             lmbd()
+        Log.e("TAG", "After highFun: ", )
     }
 
    // 2. lambda with paramater and return
@@ -30,19 +34,28 @@ class HighOrder {
 
     fun highfunReturn( lmbd: (Int,Int) -> Int)
     {
-        println("Return Sum"+ lmbd(2,4))
+        Log.e("TAG", "before highFun: ", )
+        Log.e("TAG","Return Sum"+ lmbd(2,4))
+        Log.e("TAG", "After highFun: ", )
+
     }
 
     //3. Function which return unit
 
-    fun printMe(s: String) : Unit
+     fun printMe(s: String) : Unit
     {
-        println(s)
+        Log.e("TAG", "before highFun: ", )
+        Log.e("TAG","Return Sum"+ s)
+        Log.e("TAG", "After highFun: ", )
+
     }
 
     fun higherFun(string: String,myfun:(String)-> Unit)
     {
+        Log.e("TAG", "before highFun: ", )
         myfun(string)
+        Log.e("TAG", "After highFun: ", )
+
     }
 
     // Return Integer
@@ -52,8 +65,12 @@ class HighOrder {
     }
     fun higherfunc(addfunc:(Int,Int)-> Int){
         // invoke regular function using local name
+        Log.e("TAG", "before highFun: ", )
         var result = addfunc(3,6)
-        println("The sum of two numbers is: $result")
+        Log.e("Tag","The sum of two numbers is: $result")
+        Log.e("TAG", "After highFun: ", )
+
+
     }
 
 

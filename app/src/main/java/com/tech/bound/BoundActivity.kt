@@ -11,6 +11,7 @@ import android.util.Log
 import android.view.View
 import com.fragment.R
 import kotlinx.android.synthetic.main.activity_bound.*
+import kotlinx.android.synthetic.main.activity_home.*
 import java.util.Observer
 
 
@@ -62,6 +63,9 @@ class BoundActivity : AppCompatActivity() ,View.OnClickListener {
         Intent(this, BoundService::class.java).also { intent ->
             bindService(intent, serviceConnection, Context.BIND_AUTO_CREATE)
         }
+
+        var intent =Intent(this,BoundService::class.java)
+        boundService
     }
 
     /**

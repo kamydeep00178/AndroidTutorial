@@ -32,19 +32,22 @@ class MainViewModel : ViewModel() {
 
 
 
-  /*  var newUserLiveData= MutableLiveData<User>()
+    var newUserLiveData= MutableLiveData<User>()
 
-    val liveDataSwithMap : LiveData<String> = Transformations.switchMap(userLiveData,
-        {it->getName(userLiveData.value?.name.toString())}
+    val liveDataSwithMap : LiveData<User> = Transformations.switchMap(userLiveData,
+        {
+                it->getName(userLiveData.value?.name.toString())
+        }
     )
-*/
 
 
-   /* fun getName(name:String)
+    fun getName(name:String) : MutableLiveData<User>
     {
-         newUserLiveData?.value?.name
+        var name1="name"
+
+        newUserLiveData?.value?.name = name1
+        return newUserLiveData
     }
-*/
 
    // val liveData : LiveData<String> = Transformations.map()
     fun getCount() : Int

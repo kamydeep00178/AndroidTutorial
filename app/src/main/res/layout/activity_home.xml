@@ -9,6 +9,7 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/kml"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -16,6 +17,7 @@
     tools:context="com.fragment.com.tech.HomeActivity">
 
     <Button
+        android:background="@drawable/ripple"
         android:text="Rx World"
         android:id="@+id/rxJava"
         android:layout_width="match_parent"
@@ -23,6 +25,9 @@
 
 
     <Button
+        style="@style/SelectableItemBackground"
+        android:clickable="true"
+        android:foreground ="?attr/selectableItemBackground"
         android:text="Fragment Tutorial"
         android:id="@+id/fragment"
         android:layout_width="match_parent"
@@ -151,6 +156,34 @@
         android:id="@+id/myMap"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
+    <Button
+        android:text="Dialog Fragment"
+        android:id="@+id/dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <Button
+        android:text="Dialog"
+        android:id="@+id/dialogMY"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <Button
+        android:text="customView"
+        android:id="@+id/customView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:text="Order Activity Fragment"
+        android:id="@+id/orderActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
 
 
 

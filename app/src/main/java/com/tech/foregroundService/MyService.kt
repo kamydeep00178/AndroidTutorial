@@ -47,7 +47,7 @@ class MyService : Service() {
 
 
         p++;
-        for (i in 0..100)
+        for (i in 0..1000)
         {
             Thread.sleep(10)
             Log.e(TAG, " ${p} Running: Service -- > "+i)

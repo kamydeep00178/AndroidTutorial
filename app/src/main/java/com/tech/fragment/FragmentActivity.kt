@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.fragment.R
+import com.tech.singleton.MySInglton
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -25,6 +26,7 @@ class FragmentActivity : AppCompatActivity() , OneFragment.TextClickedListener{
         getSupportActionBar()?.setTitle("Hello world App");
 
 
+        Log.e("TAG", "onCreate: "+ MySInglton.getData())
 
 
         lateinit var oneFrag : OneFragment;

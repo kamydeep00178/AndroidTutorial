@@ -22,7 +22,7 @@ class ForegroundActivity : AppCompatActivity() {
         var intent = Intent(this, MyService::class.java)
             intent.putExtra("inputExtra", "Hello Start")
 
-        //    startService(intent)
+         //   startService(intent)
           ContextCompat.startForegroundService(this, intent)
 
 

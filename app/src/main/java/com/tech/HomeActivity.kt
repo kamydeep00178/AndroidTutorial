@@ -2,10 +2,14 @@ package com.tech
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import android.view.Gravity
 import android.view.View
+import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.fragment.R
-import com.tech.LinkedListInterview.KotlinActivity
+import com.tech.kotlinemy.KotlinActivity
 import com.tech.activity.ActivityLifeCycle
 import com.tech.alarmManager.AlarmManagerActivity
 import com.tech.backgroundwork.BackgroundActivity
@@ -13,7 +17,10 @@ import com.tech.bound.BoundActivity
 import com.tech.broadcast.BroadCastActivity
 import com.tech.camerx.CameraActivity
 import com.tech.corountine.CoActivity
+import com.tech.customView.CustomActivity
+//import com.tech.customView.EmtionalFaceView
 import com.tech.daggerPCK.DaggerActivity
+import com.tech.demoFragmentWithRecyclerView.Activity_with_Fargment
 import com.tech.foregroundService.ForegroundActivity
 import com.tech.fragment.FragmentActivity
 import com.tech.intentSe.MyIntentService
@@ -26,6 +33,7 @@ import com.tech.observerExample.MessageSubscriberOne
 import com.tech.observerExample.MessageSubscriberTwo
 import com.tech.playmucic.PlayMusicActivity
 import com.tech.rxMy.MyRxActivity
+import com.tech.singleton.MySInglton
 import com.tech.telephoneyMan.TeleActivity
 import com.tech.viewModelExample.MainActivity
 import com.tech.viewPager2.MyViewPager2
@@ -38,6 +46,11 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
+         var textView1 = TextView(applicationContext)
+
+        textView1.setText("Kamal")
+        textView1.gravity=Gravity.CENTER_HORIZONTAL
+        kml.addView(textView1)
 
 
 
@@ -58,7 +71,13 @@ class HomeActivity : AppCompatActivity() {
         fragment.setOnClickListener(View.OnClickListener {
 
             val intent : Intent = Intent(this, FragmentActivity::class.java)
+            var data=MySInglton
+            data.getInstance(this)
+
+            Log.e("TAG", "onCreate: "+ data.getData())
+
             startActivity(intent)
+            
         })
 
         foregroundService.setOnClickListener(View.OnClickListener {
@@ -169,10 +188,44 @@ class HomeActivity : AppCompatActivity() {
             startActivity(intent)
         })
 
+        dialog.setOnClickListener({
+            SimpleDialog.newInstance(getString(R.string.app_name), getString(R.string.app_name)).show(supportFragmentManager, SimpleDialog.TAG)
+
+        })
+        dialogMY.setOnClickListener {
+            showDefaultDialog()
+
+        }
+        customView.setOnClickListener {
+            var intent= Intent(this,CustomActivity::class.java)
+            startActivity(intent)
+        }
+        orderActivity.setOnClickListener {
+            var intent= Intent(this, Activity_with_Fargment::class.java)
+            startActivity(intent)
+        }
+
+
+
 
 //        motionLayout.setOnClickListener(View.OnClickListener {
 //            val intent : Intent = Intent(this, MotionExample::class.java)
 //            startActivity(intent)
 //        })
+    }
+    private fun showDefaultDialog() {
+        val alertDialog = AlertDialog.Builder(this)
+        alertDialog.apply {
+            setTitle("Hello")
+        }.create().show()
+    }
+    override fun onResume() {
+        super.onResume()
+        Log.e("TAG", "onResume: ", )
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.e("TAG", "onPause: ", )
     }
 }

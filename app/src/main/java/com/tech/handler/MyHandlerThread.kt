@@ -17,7 +17,7 @@ class MyHandlerThread : HandlerThread("My Handler") {
     override fun onLooperPrepared() {
         super.onLooperPrepared()
         Log.e("TAG", "onLooperPrepared: ", )
-        handler = object : Handler() {
+        handler = object : Handler(looper) {
             override fun handleMessage(msg: Message) {
                 when (msg.what) {
                     EXAMPLE_TASK -> {

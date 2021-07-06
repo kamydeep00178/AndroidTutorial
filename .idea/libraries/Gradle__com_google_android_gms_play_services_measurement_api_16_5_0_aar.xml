@@ -4,9 +4,13 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/98a34be7e37751d125a977fc917e9c2d/jetified-play-services-measurement-api-16.5.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/98a34be7e37751d125a977fc917e9c2d/jetified-play-services-measurement-api-16.5.0/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/98a34be7e37751d125a977fc917e9c2d/jetified-play-services-measurement-api-16.5.0/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a05f4e97a8ca733b5b59b7b4acb8777c/jetified-play-services-measurement-api-16.5.0/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a05f4e97a8ca733b5b59b7b4acb8777c/jetified-play-services-measurement-api-16.5.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b5e63ed14065ae0c8f60e701da6c5ef5/jetified-play-services-measurement-api-16.5.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a05f4e97a8ca733b5b59b7b4acb8777c/jetified-play-services-measurement-api-16.5.0/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a05f4e97a8ca733b5b59b7b4acb8777c/jetified-play-services-measurement-api-16.5.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3dfd70f8ad9c8feea29c03fb6e0e0264/jetified-play-services-measurement-api-16.5.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3dfd70f8ad9c8feea29c03fb6e0e0264/jetified-play-services-measurement-api-16.5.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3dfd70f8ad9c8feea29c03fb6e0e0264/jetified-play-services-measurement-api-16.5.0/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.gms/play-services-measurement-api/16.5.0/564f28ef9a52aa516314c78c701d862f6f41047c/play-services-measurement-api-16.5.0-javadoc.jar!/" />

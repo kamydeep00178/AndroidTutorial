@@ -27,7 +27,7 @@ class MainFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-//        viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
+     viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
 //        viewModel.liveData.observe(viewLifecycleOwner, Observer {
 //            message.text=it.toString()
 //

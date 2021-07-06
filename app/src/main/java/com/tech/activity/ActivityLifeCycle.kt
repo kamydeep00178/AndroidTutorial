@@ -49,6 +49,10 @@ class ActivityLifeCycle : AppCompatActivity() {
     var tttt : String  ="qqqqqqqqq"
 
 
+    companion object{
+        var count =10
+    }
+
     override fun onStart() {
         super.onStart()
         Log.e(TAG, "onStart: ")
@@ -122,6 +126,8 @@ class ActivityLifeCycle : AppCompatActivity() {
 
 
         val add = MyConstructor(5, 6)
+         val res= add square 3
+        Log.e("TAG", "Infix "+ res )
        // Log.e(TAG, "Sum: ${add.c}")
 
         Log.e(TAG, "onCreate: ")

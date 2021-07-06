@@ -6,7 +6,21 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_marginTop="40dp"
-    tools:context="com.tech.LinkedListInterview.KotlinActivity">
+    tools:context="com.tech.kotlinemy.KotlinActivity">
+
+    <Button
+        android:id="@+id/highOrder"
+        android:text="high Order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </Button>
+
+    <Button
+        android:id="@+id/inner"
+        android:text="Inner Func"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </Button>
 
     <Button
         android:id="@+id/extens"
@@ -15,4 +29,93 @@
         android:layout_height="wrap_content">
     </Button>
 
+    <Button
+        android:id="@+id/letScope"
+        android:text="Let Scope"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </Button>
+    <Button
+        android:id="@+id/runScope"
+        android:text="Run Scope"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </Button>
+    <Button
+        android:id="@+id/withScope"
+        android:text="With Scope"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </Button>
+    <Button
+        android:id="@+id/alsoScope"
+        android:text="also Scope"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </Button>
+
+    <Button
+        android:id="@+id/applyScope"
+        android:text="apply Scope"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </Button>
+
+    <Button
+        android:id="@+id/delegate"
+        android:text="delegate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </Button>
+
+    <Button
+        android:id="@+id/lareinitVar"
+        android:text="lateinit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </Button>
+
+    <Button
+        android:id="@+id/lazyByVar"
+        android:text="lazy by"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </Button>
+
+    <Button
+        android:id="@+id/fold"
+        android:text="fold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </Button>
+    <Button
+        android:id="@+id/reduce"
+        android:text="reduce"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </Button>
+    <Button
+        android:id="@+id/prefix"
+        android:text="prefix"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </Button>
+    <Button
+        android:id="@+id/map"
+        android:text="map"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </Button>
+    <Button
+        android:id="@+id/flatMap"
+        android:text="flatMap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </Button>
+    <Button
+        android:id="@+id/fliter"
+        android:text="fliter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </Button>
 </LinearLayout>
